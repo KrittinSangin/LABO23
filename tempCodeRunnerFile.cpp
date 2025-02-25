@@ -42,16 +42,9 @@ void importDataFromFile(string filename,vector<string>& names, vector<int> &scor
 
 void getCommand(string &command, string &key){
         cout << "Please input your command: "<<endl;
-         string text;
-        char command1[100] = {};
-        char key1[100] = {};
-        getline(cin , text);
-        const char * ctext = text.c_str();
-        char format[] = "%s %[^\n]";
-        sscanf(ctext,format, command1,key1);
-        command = command1;
-        key = key1;
-
+        cin >> command;
+        cin >> key;
+    
     }
 
     void searchName(vector<string> names,vector<int> scores,vector<char> grades,string name){
@@ -68,7 +61,7 @@ void getCommand(string &command, string &key){
         
        
         if(found)cout << "Cannot found."<<endl;
-        cout << "---------------------------------"<< endl;
+        cout << "---------------------------------";
     
     
     
@@ -91,7 +84,7 @@ void getCommand(string &command, string &key){
             
            if(found)cout << "Cannot found."<<endl;
             
-            cout << "---------------------------------"<< endl;
+            cout << "---------------------------------";
         
         
         
